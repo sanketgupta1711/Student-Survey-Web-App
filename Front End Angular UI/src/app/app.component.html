@@ -1,0 +1,30 @@
+<meta http-equiv="Cache-Control" content="max-age=0, must-revalidate"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="0" />
+
+<!--<div> 
+    <router-outlet>
+    </router-outlet>
+</div>-->
+
+
+<div>
+    <div *ngIf = "showStudentSurveyForm == true">
+        <app-submit-survey  [fetchedRecord] = "fetchedRecord" (displayPageName) = "displayPageOnEvent($event)"></app-submit-survey> 
+    </div>
+</div>
+
+<div>
+    <div *ngIf = "errorMessage == true">
+        <app-submit-survey (displayPageName) = "displayPageOnEvent($event)"></app-submit-survey> 
+    </div>
+</div>
+
+
+<div>
+    <div *ngIf = "showAcknowledgement == true">
+        <h1> Welcome to the Home Page!</h1>
+        <app-acknowledgement (displayPageName) = "displayPageOnEvent($event)"></app-acknowledgement> 
+    </div>
+</div>
+
